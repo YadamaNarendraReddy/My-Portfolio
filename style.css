@@ -1,0 +1,707 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #d3dce8, #bbcee7);
+  font-family: "Montserrat", sans-serif;
+  color: #80b5f3;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Add Blur Effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #555;
+}
+/* HEADER (NAVIGATION) */
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background: linear-gradient(135deg, #0a192f, #1e3a8a);
+  color: white;
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  background: linear-gradient(135deg, #e8ebef, #1e3a8a);
+  color: #80b5f3;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 16vh;
+  background-color: #073058;
+  color: rgb(230, 237, 244);
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: rgb(110, 190, 240);
+  text-decoration: none;
+  text-decoration-color: rgb(114, 198, 234);
+}
+
+a:hover {
+  color: #eb920c;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #fc0026;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e8b408;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(165, 211, 245);
+  transition: all 0.1 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(209, 146, 0);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+section {
+  padding-top: 4vh;
+  height: 100vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  background-color: none;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 4px rgba(246, 1, 1, 0.703);
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+#profile p{
+  font-size:1.3rem;
+}
+#profile {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  background: url('assets/data-science-profile-bg.jpg') no-repeat center center/cover;
+  color: #448de1;
+  animation: fadeIn 1ms ease-in-out;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  border-radius: 60%;
+  overflow: hidden;
+  border: 2px solid #ffa600;
+  animation: float 3s ease-in-out infinite;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 500;
+  color: #3f5d6d;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(234, 164, 60) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(228, 148, 90);
+  color: rgb(255, 255, 255);
+}
+
+.btn-color-1:hover,
+.btn-color-2 {
+  background: none;
+  color: #000000;
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+#about {
+  margin-top: 1rem;
+  position: relative;
+  background: url('assets/data-science-about-bg.jpg') no-repeat center center/cover;
+  color: #448de1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#about .section__text__p1{
+  font-size: 1rem;
+  color: #1e3160;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 1rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+.details-container{
+  cursor: pointer;
+  padding: 1.5rem;
+  flex: 1;
+  background: none;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(228, 155, 91);
+  text-align: center;
+  color: #000000;
+}
+
+#about p{
+  color: #000000;
+}
+
+#about p:hover{
+  color: #000000;
+}
+
+.details-container:hover{
+  background-color: rgb(232, 162, 112);
+  border-color: #ffffff;
+  color: #ffffff;
+
+}
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  background: url('assets/data-science-experience-bg.jpg') no-repeat center center/cover;
+  color: #448de1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section__text__p1{
+  color: #253b66;
+  font-size: 1rem;
+}
+.experience-sub-title {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+#projects p {
+  font-size: 1.46rem; /* Adjust size as needed */
+  color: #274362; /* Ensure visibility */
+  background-color: none;
+}
+#projects {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  background-color: none;
+  color: #448de1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.color-container {
+  border-color: rgb(231, 138, 16);
+  background: none;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: #000000;
+}
+
+.project-title:hover {
+  color: #ffffff;
+}
+
+.project-btn {
+  color: #000000;
+  border-color: rgb(235, 141, 9);
+}
+
+/* CONTACT */
+#contact p {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #1f3753; /* Ensure visibility */
+}
+
+#contact {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  height: 20vh;
+  color: #448de1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  height: 6vh;
+  width:90vh ;
+  border-radius: 1.5rem;
+  border: rgb(225, 152, 15) 0.1rem solid;
+  border-color: rgb(226, 152, 25);
+  background: none;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-upper-container:hover{
+  background-color: #e2941f;
+  border-color: #ffffff;
+}
+
+.contact-info-container a {
+  border-color: #000000;
+  color: #000000; /* Change email text color */
+  background-color: none;
+  text-decoration: none;
+}
+
+.contact-info-container a:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  color: #000000;
+}
+
+.contact-info-container .a{
+  color: #000000;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+footer {
+  height: 9vh;
+  margin: 0 1rem;
+  border-color: #d40101;
+  background: linear-gradient(135deg, #0a192f, #1e3a8a);
+  color: rgb(234, 13, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  text-align: center;
+  color: #a93d3d;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #010000;
+}
+
