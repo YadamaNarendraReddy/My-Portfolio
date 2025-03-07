@@ -9,3 +9,8 @@ Designed with HTML, CSS, and JavaScript, the portfolio incorporates smooth anima
 The Projects section includes real-world applications and GitHub repositories, demonstrating my hands-on experience with various technologies, frameworks, and problem-solving skills. The portfolio also integrates downloadable resume functionality, social media links, and a contact form, making it easy for potential employers or collaborators to connect with me.
 
 With a clean and professional design, my portfolio represents my commitment to innovation, continuous learning, and excellence in software development and data science.
+
+Technologies USed:
+1. HTML
+2. CSS
+3.  JavaScript
