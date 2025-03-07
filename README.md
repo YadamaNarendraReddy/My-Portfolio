@@ -1,5 +1,6 @@
 # My-Portfolio
 
+My Portfolio Link: http://127.0.0.1:5500/My-Portfolio/index.html
 My portfolio is a modern and interactive web-based resume showcasing my skills, experience, and projects in full-stack development and data science. It serves as a personal branding platform, highlighting my technical expertise, projects, and career journey in a visually appealing and structured manner.
 
 Designed with HTML, CSS, and JavaScript, the portfolio incorporates smooth animations, responsive design, and dynamic content rendering to provide a seamless user experience. It features sections such as About Me, Experience, Projects, and Contact, allowing visitors to explore my professional background and technical capabilities.
